@@ -12,12 +12,14 @@ function show_magician(magicians) {
         console.log(magician);
     }
 }
+function make_great(magicians) {
+    for (var _i = 0, magicians_2 = magicians; _i < magicians_2.length; _i++) {
+        var magician = magicians_2[_i];
+        console.log("Great ".concat(magician));
+    }
+}
 //Create list of Magician's names
 var magician_names = ["Magician1", "Magician2", "Magician3"];
-var make_great = magician_names.map(function (num) {
-    return num + " the Great";
-});
-var theGreat_magicians = make_great;
-//console.log(theGreat_magicians);
+//call the function
+make_great(magician_names);
 show_magician(magician_names);
-show_magician(theGreat_magicians);
