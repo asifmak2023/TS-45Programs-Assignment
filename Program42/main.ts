@@ -11,15 +11,15 @@ function show_magician(magicians : string[]): void {
         console.log(magician);
     }
 }
-
-function make_great(magicians : string[]): void {
-  for (const magician of magicians) {
-        console.log(`Great ${magician}`);
-    }
-}
 //Create list of Magician's names
 const magician_names : string[] = ["Magician1", "Magician2", "Magician3"];
 
-//call the function
-make_great(magician_names); 
+const make_great = magician_names.map((num) => {
+  return num +  " the Great";
+});
+
+let theGreat_magicians : string[] = make_great;
+//console.log(theGreat_magicians);
+
 show_magician(magician_names);
+show_magician(theGreat_magicians);
